@@ -16,9 +16,9 @@ document.addEventListener('keypress', function(event) {
     if ($currentChar === null) {
       alert('Good job!')
     } else if (event.key === $currentChar.textContent) {
-      $currentChar.classList.add('blue')
+      $currentChar.classList.add('correct')
       $currentChar = $currentChar.nextSibling
     } else {
-      $currentChar.classList.add('red')
+      $currentChar.classList.add('wrong')
     }
 })
