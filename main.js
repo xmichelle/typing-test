@@ -13,12 +13,12 @@ $phrase.querySelector('span').classList.add('current')
 var $currentChar = document.querySelector('.current')
 
 document.addEventListener('keypress', function(event) {
-    if (event.key === $currentChar.textContent) {
-      console.log('correct')
-      $currentChar.style = 'color: #1e90ff; font-size: 19px'
+    if ($currentChar === null) {
+      alert('Good job!')
+    } else if (event.key === $currentChar.textContent) {
+      $currentChar.classList.add('blue')
       $currentChar = $currentChar.nextSibling
     } else {
-      console.log('try again')
-      $currentChar.style = 'color: #ff0000; font-size: 19px'
+      $currentChar.classList.add('red')
     }
 })
