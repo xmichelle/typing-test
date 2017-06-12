@@ -11,3 +11,14 @@ for (var i = 0; i < chars.length; i++) {
 
 $phrase.querySelector('span').classList.add('current')
 var $currentChar = document.querySelector('.current')
+
+document.addEventListener('keypress', function(event) {
+    if ($currentChar === null) {
+      alert('Good job!')
+    } else if (event.key === $currentChar.textContent) {
+      $currentChar.classList.add('blue')
+      $currentChar = $currentChar.nextSibling
+    } else {
+      $currentChar.classList.add('red')
+    }
+})
