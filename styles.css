@@ -20,12 +20,7 @@
 }
 
 .score {
-  height: 30px;
-  width: 50px;
-  background-color: blue;
   position: relative;
   left: 100px;
   top: 60px;
 }
-
-/* Comment */
