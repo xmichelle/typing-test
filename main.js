@@ -12,13 +12,16 @@ for (var i = 0; i < chars.length; i++) {
 $phrase.querySelector('span').classList.add('current')
 var $currentChar = document.querySelector('.current')
 
+var $showScore = document.querySelector('.score')
+
 document.addEventListener('keypress', function(event) {
     if ($currentChar === null) {
-      alert('Good job!')
+      var $wrong = document.querySelectorAll('span.wrong').length
+      $showScore.textContent = '# of incorrect characters: ' + $wrong
     } else if (event.key === $currentChar.textContent) {
-      $currentChar.classList.add('blue')
+      $currentChar.classList.add('correct')
       $currentChar = $currentChar.nextSibling
     } else {
-      $currentChar.classList.add('red')
+      $currentChar.classList.add('wrong')
     }
 })

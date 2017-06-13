@@ -9,12 +9,18 @@
   color: #1e90ff;
 }
 
-.blue {
+.wrong {
+  color: #f00;
+  font-size: 19px;
+}
+
+.correct {
   color: #1e90ff;
   font-size: 19px;
 }
 
-.red {
-  color: #f00;
-  font-size: 19px;
+.score {
+  position: relative;
+  left: 100px;
+  top: 60px;
 }
