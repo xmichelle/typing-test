@@ -24,6 +24,7 @@ document.addEventListener('keypress', function(event) {
     //$correct = document.querySelectorAll('span').length - $wrong
       console.log($wrong)
     //console.log($correct)
+    //
     } else if (event.key === $currentChar.textContent) {
       $currentChar.classList.add('correct')
       $currentChar = $currentChar.nextSibling
