@@ -17,14 +17,11 @@ var $showScore = document.querySelector('.score')
 document.addEventListener('keypress', function(event) {
     if ($currentChar === null) {
       var $wrong = document.querySelectorAll('span.wrong').length
-      console.log($wrong)
       $showScore.textContent = '# of incorrect characters: ' + $wrong
     } else if (event.key === $currentChar.textContent) {
       $currentChar.classList.add('correct')
       $currentChar = $currentChar.nextSibling
-      console.log('correct')
     } else {
       $currentChar.classList.add('wrong')
-      console.log('wrong')
     }
 })
